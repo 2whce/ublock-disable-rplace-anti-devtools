@@ -1,0 +1,9 @@
+! Title: Disable RPlace.live Anti-Devtools
+! Author: JurSecondie
+! Description: uBlock Origin Filter that disables rplace.live's anti devtools script.
+
+||cdn.jsdelivr.net/npm/disable-devtool$script
+||cdn.jsdelivr.net/npm/devtools-detector$script,3p
+rplace.live##+js(set, console.clear, noopFunc)
+rplace.live##+js(set, console.table, noopFunc)
+rplace.live##+js(set, console.log, noopFunc)
